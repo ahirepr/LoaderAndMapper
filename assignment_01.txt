@@ -1,0 +1,21 @@
+Data Loader and mapper
+
+Goal is to import data from a CSV file and insert to database table
+
+mapping of csv column to db column must be in .properties file e.g cust_name = customer name, so from csv file customer name will go into cust_name column of DB table
+
+First row in CSV file should be a headers which are mapped in .prop file
+
+Use Core java only, no tools no any frameworks
+
+Use Postgres as database
+
+All errors should be handled.
+
+It is fine to have duplicate data at the moment, so create a primary key which is autoincrement. 
+
+When insertion happens, if table exist then just insert else create a NEW table in database and then do insertion. Name of table should be exactly the same as of CSV file name. You can predefined the folder location from where .csv file will be looked up, file name and database name must not be hard coded.
+
+If in csv file there are 10 records and 2 records have some error then other 8 must get inserted. At the end print a summary of total number of records processed and how many success and how many failure.
+
+Create a separate project in eclipse and commit that project in repository
